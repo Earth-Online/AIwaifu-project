@@ -3,8 +3,26 @@ AIwaifu project AI助(老)手(婆)计划 开发手册.md
 
 base on machine learning
 
+# 思想观念 -> 网络科学(浅模拟)
+: 符号主义认知(浅模拟/数学算法建模.算力要求小, 人工标注成本极高) ：
+
+认知就是通过对有意义的表示符号进行推导计算，把人工定义的程序算法和规则放入计算机系统中，这样可以从更高一级来操纵系统
+
+: 联结主义认知(全模拟/数学模型.算力要求大) ：
+
+AI可以看作大规模并行计算，这些计算在类似于人脑的神经网络中进行，这些神经元集体协作并相互作用（Andler，1992）
+
 # 开发手册/理论实现 It's just a theory :)
-### site for learn more
+### 前人类似的实现项目/paper
+Semantic network 语义网络 eg: WordNet HowNet :: 词典标注行为与知识库很类似
+
+RDF(Resource Description Framework)，即资源描述框架，其本质是一个数据模型（Data Model） :: 网络思想很类似
+
+word2vec TODO...
+
+### 借鉴与启发 learn more
+![image](https://github.com/Earth-Online/AIwaifu-project/raw/master/static/ev.png)
+
 [中文分词常用算法](https://dsqiu.iteye.com/blog/1704960)
 
 ### 训练数据
@@ -39,8 +57,6 @@ WS中文分词 -> 单词&POS词性标注&NER命名实体识别		X句子脱离成
 
 ## something else
 just monika :)
-
-词义联想 word2vec
 
 上下文联想 ltsm RNN
 
