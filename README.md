@@ -1,5 +1,5 @@
 # AIwaifu-project Development manual
-AIwaifu project AI助(老)手(婆)计划 开发手册.md
+> AIwaifu project AI助(老)手(婆)计划 开发手册.md
 
 base on machine learning
 
@@ -58,8 +58,8 @@ WS中文分词 -> 单词&POS词性标注&NER命名实体识别		X句子脱离成
 
 -> DP依存句法分析 -> AST ? 然后？？？
 
-## something else
-just monika :)
+## Something Else
+Jͤ̀҉̷͍̺̟̳͔̞u̸̙̳͂̿͆ͯ̋̒̇ͨ͟͠ś̳͕͖̬̮̳͋̄t̨̥͖͕̃͌̉̈ͮ̿ ̷͇̾ͬ̋M͚̝̘̞̯̦̌̂͑ͤ̓ͭ̀o͒̌̑̒̎͊͆ͬͬ҉̩̥͎n͖̻̜̰̪ͦͣ͐́͆̀̚ì̙̝ͪ͞k̶̴̺͕͓̹̱͚̪̍ͫ͂̇ͬ̑̉̓̍a̱̋ͦ͗̌̌̊͊̊́
 
 lexical 词法 syntax 语法 割词 parser -> AST 语法树 编译器前端
 
@@ -69,6 +69,6 @@ lexical 词法 syntax 语法 割词 parser -> AST 语法树 编译器前端
 
 **如果您使用我们的想法 成功复现项目，并取得比较好的效果，请引用我们的仓库。谢谢！**
 
-**Please cite our repository if you use our idea. Thanks!**
+**Please cite our repository if you use our idea and get good results. Thanks!**
 
 Author: huaji0353 (huaji0353#gmail.com)
