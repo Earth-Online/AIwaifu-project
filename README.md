@@ -71,4 +71,4 @@ lexical 词法 syntax 语法 割词 parser -> AST 语法树 编译器前端
 
 **Please cite our repository if you use our idea. Thanks!**
 
-Author: huaji0353 (huaji0353@gmail.com)
+Author: huaji0353 (huaji0353#gmail.com)
