@@ -3,16 +3,16 @@ AIwaifu project AI助(老)手(婆)计划 开发手册.md
 
 base on machine learning
 
-# 思想观念 -> 网络科学(浅模拟)
-: 符号主义认知(浅模拟/数学算法建模.算力要求小, 人工标注成本极高) ：
+## 思想观念 -> 网络科学(浅模拟)
+### 符号主义认知(浅模拟/数学算法建模.算力要求小, 人工标注成本极高) ：
 
 认知就是通过对有意义的表示符号进行推导计算，把人工定义的程序算法和规则放入计算机系统中，这样可以从更高一级来操纵系统
 
-: 联结主义认知(全模拟/数学模型.算力要求大) ：
+### 联结主义认知(全模拟/数学模型.算力要求大) ：
 
 AI可以看作大规模并行计算，这些计算在类似于人脑的神经网络中进行，这些神经元集体协作并相互作用（Andler，1992）
 
-# 开发手册/理论实现 It's just a theory :)
+## 开发手册/理论实现 It's just a theory :)
 ### 前人类似的实现项目/paper
 Semantic network 语义网络 eg: WordNet HowNet :: 词典标注行为与知识库很类似
 
@@ -20,9 +20,12 @@ RDF(Resource Description Framework)，即资源描述框架，其本质是一个
 
 word2vec TODO...
 
+AIML 模版引擎
+
 ### 借鉴与启发 learn more
 ![image](https://github.com/Earth-Online/AIwaifu-project/raw/master/static/ev.png)
 
+#### 算法页面 site
 [中文分词常用算法](https://dsqiu.iteye.com/blog/1704960)
 
 ### 训练数据
@@ -58,25 +61,14 @@ WS中文分词 -> 单词&POS词性标注&NER命名实体识别		X句子脱离成
 ## something else
 just monika :)
 
-上下文联想 ltsm RNN
+lexical 词法 syntax 语法 割词 parser -> AST 语法树 编译器前端
 
-AIML
+?问答系统 FSM(状态机)（简单）Q->A
 
-lexical word 词法
+?聊天系统（复杂）Q->A QQ->A Q->AA...
 
-syntax 语法
+**如果您使用我们的想法 成功复现项目，并取得比较好的效果，请引用我们的仓库。谢谢！**
 
-割词 parser -> AST 语法树
+**Please cite our repository if you use our idea. Thanks!**
 
-?问答系统 FSM(状态机)（简单）
-
-Q->A
-
-?聊天系统（复杂）
-
-Q->A
-
-QQ->A
-
-Q->AA
-
+Author: huaji0353 (huaji0353@gmail.com)
