@@ -2,7 +2,7 @@
 > AIwaifu project AI助(老)手(婆)计划 开发手册 日志.md
 
 **少年よ、神話になる必要はないよ。**
-> 少年，你不必成为神话。
+> 少年哟，你不必成为神话。[why?](https://www.myzaker.com/article/592d87241bc8e0a948000000/)
 
 base on machine learning 学好初/高等数学 不计功利 耐心，太重要了...有一堆想法，看了一堆paper，硬是找不到函数实现...
 
