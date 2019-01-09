@@ -1,0 +1,4 @@
+var evt = document.createEvent('HTMLEvents');
+evt.initEvent('dblclink',true,true);
+temp0.dispatchEvent(evt);
+

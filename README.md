@@ -1,5 +1,5 @@
-# AIwaifu-project Development manual journal
-> AIwaifu project AI助(老)手(婆)计划 开发手册 日志.md
+# AIwaifu-project Development manual - journal
+> AIwaifu project AI助(老)手(婆)计划 开发手册 - 日志.md
 
 [![](https://img.shields.io/github/issues/Earth-Online/AIwaifu-project.svg)](https://github.com/Earth-Online/AIwaifu-project/issues)  [![](https://img.shields.io/github/forks/Earth-Online/AIwaifu-project.svg)](https://github.com/Earth-Online/AIwaifu-project/network) [![](https://img.shields.io/github/stars/Earth-Online/AIwaifu-project.svg)](https://github.com/Earth-Online/AIwaifu-project/stargazers) [![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg)](README-CN.md)
 

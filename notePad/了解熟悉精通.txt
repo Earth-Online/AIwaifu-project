@@ -1,0 +1,32 @@
+TCP/IP网络的相关经验
+三年以上Python开发经验；
+信息安全相关开发经历；驱动程序开发经历；操作系统相关开发经历；网络应用开发经历；
+在Windows平台上病毒查杀、网络安全、密码开发密钥管理、登录认证、访问控制、Device Guard、TPM应用、证书体系等任意方向有深入理解和丰富实践经验者优先；
+拥有一定的网络知识，了解TCP/IP理论、对于二层三层网络协议较为了解，对于企业级路由交换协议体系有一定了解；
+有应用密码、SMx密码套件、安全漏洞和修复技术，标准，认证、授权知识背景和经验优先；
+能够熟练使用Windows Debug工具对系统进行调试，对各种系统问题进行分析及解决；
+能独立设计并开发Web服务REST API；
+
+对于Windows技术体系、Windows域管理体系有一定了解；有Unix、Linux等操作系统操作及运维经验；
+对于云计算体系及技术有一定了解，如Openstack, 虚拟化技术，容器，云管理技术等；
+对于信息安全防护体系有一定了解，包括逻辑安全防护体系，如防火墙、入侵检测及防御、防病毒等；
+对安全研究和Windows平台研究具有强烈热情和兴趣；
+对常见网络协议有深入的理解和实践；
+
+熟悉 Django/Tornado/Flask等其中至少一种框架, 并有2年以上该框架的开发经验；熟悉大规模高并发访问的Web应用开发经验者优先考虑；
+熟悉C / C++，汇编，熟悉Windows平台技术；
+熟悉PowerShell, VB等脚本编写及运用；
+熟悉ReactOS、Wine、Qubes OS等开源项目；
+熟悉Windows 驱动开发；
+熟悉Windows体系架构，Windows编程工具，Windows定制工具、打包工具；
+熟悉Windows体系架构，对Windows 10体系架构变化有深入研究，熟悉WaaS、OneCore等概念，了解Windows源码管理和编译过程；
+熟悉Windows应用程序开发；
+熟悉微软产品体系，包括Windows, WSUS, SCCM等；
+熟悉编程语言：汇编、C、C++、C#、PowerShell、Python等；
+熟练使用 MySQL、Redis、MongoDB、RabbitMQ 等第三方组件；
+
+精通MDT/USMT等Windows部署工具，并能在此基础上进行二次开发，或者有嵌入式Windows系统开发经验；
+精通PowerShell, VB等脚本编写及运用，熟悉Windows界面编程；
+精通WDS/MDT/SCCM/WSUS 使用及设置，并能在此基础进行二次开发；
+精通WinPE、WinRE、Sysprep、 DISM等相关技术；
+精通WinPE、WinRE相关技术；

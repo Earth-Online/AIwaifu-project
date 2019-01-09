@@ -1,0 +1,35 @@
+mov ebp,0x100
+jmp main
+
+add:
+	push ebp
+	mov ebp, esp
+	mov eax, DWORD [ebp+12]
+	mov edx, DWORD [ebp+8]
+	add eax, edx
+	pop ebp
+	ret
+main:
+	push ebp
+	mov ebp, esp
+	sub esp, 24
+	mov DWORD [ebp-4], 11
+	mov DWORD [ebp-8], 99
+	mov eax, DWORD [ebp-8]
+	mov DWORD [esp+4], eax
+	mov eax, DWORD [ebp-4]
+	mov DWORD [esp], eax
+	call add
+	mov eax, 0
+	leave
+	ret
+
+　　push：将数据压入栈中，具体操作是rsp先减，然后将数据压入sp所指的内存地址中。rsp寄存器总是指向栈顶，但不是空单元。
+
+　　pop：将数据从栈中弹出，然后rsp加操作，确保rsp寄存器指向栈顶，不是空单元。
+
+　　call：将下一条指令的地址压入当前调用函数的栈中（将PC指令压入栈中，因为在从内存中取出call指令时，PC指令已经自动增加），然后改变PC指令的为call的function的地址，程序指针跳转到新function。
+
+　　ret：当指令指到ret指令行时，说明一个函数已经结束了，这时候rsp已经从被调用函数的栈指到了调用函数构建的返回地址位置。ret是将rsp所指栈顶地址中的内容赋值给PC，接下来将执行call function的下一条指令。
+
+　　leave：相当于mov %esp, %ebp, pop ebp。头一条指令其实是把ebp所指的被调用函数的栈底作为新的栈顶，pop指令时相当于把被调用函数的栈底弹出，rsp指向返回地址。

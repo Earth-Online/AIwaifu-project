@@ -1,0 +1,124 @@
+REPL命令行解释器
+Interpreter 命令行语言解释器
+系统级编程语言
+
+osdev0x01
+re0_writeos.html
+os tutorial re0
+
+16位(1111111111111111) -> 0xFFFF(2B 2字节) 
+
+intel处理器发展史：时间 型号/位数 |地址总线位
+4004/4
+1978 8008/8		通用寄存器，指针寄存器，变址寄存器
+				数据通用寄存器 AX/算数，BX/寻址，CX/计数，DX/flag | 栈寄存器 SP，BP |
+				段寄存器 CS，DS(默认base如下)，SS，ES | SI，DI | IP，FLAG
+			!在8086中只有4个寄存器可以以[reg]寻址的方式使用，这四个寄存器分别是 BX，SI，DI，BP
+			!BX，SI，DI 会默认使用 DS 段寄存器，而段地址则使用默认的 SS 寄存器中的值
+1978 8086/16|20		加入MMU作为偏移寻址策略 栈的支持
+1982 80286/16|24		保护模式 GDTR 控制寄存器
+1985 80386/32|32		分页 虚拟内存 VM8086
+1989 80486/32
+1993 Pentium/32|64
+
+内存数据模型:
+1字节Byte = 8位bit(11111111)
+字节为最小单位
+
+
+汇编数据体系:
+db	字节变量	1字节	offset+1
+dw	字变量		2/4字节	offset+2
+dd	双字变量	4/8字节	offset+4
+字长由cpu位数决定,汇编器选择
+
+
+指令操作数的赋值方向是不同的
+	Intel：第一个是目的操作数，第二个是源操作数
+	AT＆T：第一个是源操作数，第二个是目的操作数
+
+指令前缀
+	AT＆T：寄存器前边要加上％，立即数前要加上$
+	Intel：没有这方面的要求
+
+内存单元操作数
+		Intel：基地址使用［］
+		AT&T： 基地址使用（）
+	比如：
+		intel中 mov ax,[bx]
+		AT&T中 movl (%eax),%ebx
+
+操作码的后缀
+		AT&T中操作码后面有一个后缀字母:“l” 32位,“w” 16位,“b” 8位
+		Intel却使用了在操作数前面加dword ptr, word ptr, byte ptr的格式
+	例如:
+		mov al,bl (Intel)
+		movb %bl %al (AT&T)
+
+		AT＆T中跳转指令标号后的后缀 表示跳转方向，“f”表示向前，“b”表示向后
+
+set disassembly-flavor intel 英特尔语法
+gcc -S -masm=intel asmtest.c 英特尔语法
+objdump -d --disassembler-options=intel a.out 英特尔语法
+
+
+编译原理：
+clang -fmodules -fsyntax-only -Xclang -dump-tokens 2.c		打印分词后的结果
+clang -fsyntax-only -Xclang -ast-dump 2.c					打印AST树
+clang -S -fobjc-arc -emit-llvm 2.c -o 2.ll					生成IR
+
+
+dos debug:
+-a 输入汇编码
+-t 步进并监控
+-d dump内存
+-g=addr 执行代码
+-r ax FF 修改寄存器的值
+-w/l addr 保存/加载文件<->内存
+
+
+c语言类型数据大小和机器字长及编译器有关系：
+所以，int，long int，short int的宽度都可能随编译器而异。但有几条铁定的原则（ANSI/ISO制订的）：   
+1 sizeof(short int)<=sizeof(int)   
+2 sizeof(int)<=sizeof(long int)   
+3 short int至少应为16位（2字节）   
+4 long int至少应为32位。   
+unsigned 是无符号的意思。  
+  
+例如：  
+16位编译器  
+char ：1个字节  
+char*(即指针变量): 2个字节  
+short int : 2个字节  
+int：  2个字节  
+unsigned int : 2个字节  
+float:  4个字节  
+double:   8个字节  
+long:   4个字节  
+long long:  8个字节  
+unsigned long:  4个字节
+
+32位编译器  
+char ：1个字节  
+char*（即指针变量）: 4个字节（32位的寻址空间是2^32, 即32个bit，也就是4个字节。同理64位编译器）  
+short int : 2个字节  
+int：  4个字节  
+unsigned int : 4个字节  
+float:  4个字节  
+double:   8个字节  
+long:   4个字节  
+long long:  8个字节  
+unsigned long:  4个字节 
+
+
+
+
+理解程序调度原理
+https://www.zhihu.com/question/23561375
+
+
+你有什么值得炫耀的/os
+https://www.zhihu.com/question/29403861/answer/44441261
+
+ref:
+http://www.cnblogs.com/BoyXiao/archive/2010/11/20/1882716.html

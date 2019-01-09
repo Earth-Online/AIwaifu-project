@@ -1,0 +1,19 @@
+gcc -fno-builtin -Wall -m32 -fno-stack-protector -O -nostdinc -Iboot -Ilibs -c boot\bootasm.S -o obj\bootasm.o
+
+ld -N -e start -Ttext 0x7C00 -o obj/bootblock.o obj/bootasm.o obj/bootmain.o
+
+objcopy -S -O binary obj/bootblock.o obj/bootblock.out
+
+tools\sign.exe obj/bootblock.out obj/bootblock
+
+dd if=obj/bootblock.out of=obj/ucore.img conv=notrunc
+
+E:\tools\QemuBootTester\myqemu.exe -hda obj\ucore.img
+
+
+
+nasm -f elf -F dwarf -g boot.s
+
+ld -melf_i386 -Ttext=0x7c00 --oformat binary -o boot.bin boot.o
+
+cat boot.bin /dev/zero | head -c 1474560 > boot.img

@@ -1,0 +1,145 @@
+古老的笔记：
+	git config --global user.name "John Doe"
+　　git config --global user.email johndoe@example.com
+	git config --global core.editor vim
+	git log
+	git reset --hard ID
+	git clone
+	git pull #update
+	git add filename
+	git commit # commit txt
+	git push # commit code
+	git status # status
+
+	f5 #ida
+
+	rtmp://0.tcp.ap.ngrok.io:12481/live/test
+	->
+	rtmp://192.168.1.102:1935/live
+
+	hexo new page "404"
+
+	vs2013 BWG7X-J98B3-W34RT-33B3R-JVYW9
+
+	document.body.contentEditable = "true"
+	document.body.innerText   //获取并输出body>…/body>之间的文本 
+
+chrome:
+	chrome://errorpage/
+	chrome://ssl-block/
+
+	document.querySelector('.lastResult') // 选择元素类
+	guessSubmit.addEventListener('click', checkGuess); // 添加事件监听函数
+	sstap ShadowsocksR v2ray 
+	http://blog.021xt.cc/archives/85
+	[65552]
+	window.location.reload()
+	var script = document.createElement("script");script.src = "test.js";document.body.appendChild(script);
+	var all = document.getElementsByTagName('cite');
+	https://www.maldun.com
+
+谷歌使用:
+	intext: 把网页中的正文内容中的某个字符做为搜索条件;
+	allintext:使用方法和intext类似;
+	intitle: 搜索网页标题中是否有我们所要找的字符; 
+	cache: 搜索GOOGLE里关于某些内容的缓存,有时候往往能找到一些好东西. 
+	define: 搜索某个词的定义;
+	filetype: 搜索制定类型的文件;
+	info: 查找指定站点的一些基本信息;
+	inurl: 搜索我们指定的字符是否存在于URL中.常用于查找通用漏洞、注入点、管理员登录的URL;
+	allinurl:也同INURL类似,可指定多个字符;
+	LINKURL: 例如搜索:INURL:HDU.EDU.CN可以返回所有和HDU.EDU.CN做了链接的URL;
+	site: 搜索指定域名,用于搜集二级域名;
+
+	+ 把GOOGLE可能忽略的字列如查询范围 
+	– 把某个字忽略 
+	~ 同意词 
+	. 单一的通配符 
+	* 通配符，可代表多个字母 
+	“” 精确查询
+	
+	推荐的关键词很有用！！！
+
+windbg:
+	http://codemachine.com/downloads.html
+	winbdg各种版本
+	SRV*C:\symbols*http://msdl.microsoft.com/download/symbols
+	.reload
+	!analyze -v
+
+Firefox关闭GET请求到detectportal.firefox.com网站的方法
+如何阻止 Firefox 在未经我许可的情况下自动连接
+·about:config·
+× network.captive-portal-service.enadbled
+× browser.safebrowsing.provider.google.lists
+× browser.safebrowsing.provider.mozilla.gethashURL
+× browser.safebrowsing.provider.mozilla.updateURL 
+
+彻底禁用ipv6
+http://www.techunboxed.com/2012/08/how-to-disable-ipv6-in-windows-8.html
+
+
+Windows安全:
+	获取win最高system权限
+	但如果遇到那种什麽都不会的小白恐怕会把系统搞挂...
+	sc Create SuperCMD binPath= "cmd /K start" type= own type= interact
+	sc start SuperCMD
+	用完后记得
+	sc delete SuperCMD
+
+	reset session 65536 /server:huaji0353-pc
+	wmic brief/net
+	mountvol
+	regedit/REG query
+	msconfig
+	ipconfig
+
+重装驱动，winpacp也重装
+
+如果是exe安装包，可以尝试寻找tmp文件夹里面的msi来进行纯净安装
+github看代码可以从commit记录看
+bing翻译能够无损代码格式翻译整个网页
+
+Cuckoo windows沙盒折腾记
+	pycrypto需要二进制兼容pyd包，所以会报错，安装玩这个直接pip install cuckoo
+	http://www.voidspace.org.uk/python/modules.shtml#pycrypto
+	设置conf可以照着文档弄，懒得建虚拟机 以为和本地沙盒一样，连本地居然还要开rpc，果断放弃。。。
+	Received unknown exception: <ProtocolError for 192.168.1.103:8000/RPC2: 404 Not Found>.
+
+折腾win10发行版记录：
+	pe系统
+	https://msdn.microsoft.com/zh-tw/library/windows/hardware/dn938384(v=vs.85).aspx
+	有用的网站：
+	http://ahtcjxf.blog.163.com/ 使用WINADK自制pe
+	https://03k.org
+	知识库:
+	各种版本https://www.2cto.com/os/201703/616250.html
+	所谓 N 版是指“Not with Windows Media Player”的缩写
+	主要的版本其实就是家庭版，专业版，企业版，教育版，工作站版。其余的都是这些版本的互相搭配整合出的版本,安装盘里的那
+	些都是组策略
+	下载制作软件:
+	https://go.microsoft.com/fwlink/?LinkId=691209
+	C:\$WINDOWS.~BT\Sources下拦截到的产品xml列表，可用如下地址解包
+	https://blog.csdn.net/a4019069/article/details/79828133
+
+自制 工具链 编程语言 IDE 编译器 操作系统 软件生态圈：
+	自制编程语言
+		Lex/Flex	词法分析lexer
+		Yacc/Bison	语法分析parser
+	自制编译器
+		https://woodrat.xyz/2017/04/09/%E4%BD%BF%E7%94%A8%20PLY%20%E4%B8%8E%20LLVM%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAC%E8%AF%AD%E8%A8%80%E5%AD%90%E9%9B%86%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/
+		http://lotabout.me/2015/write-a-C-interpreter-1/
+	自制操作系统
+		flingos的评价
+		https://news.ycombinator.com/item?id=10824748
+		c#写os
+		https://news.ycombinator.com/item?id=13794879
+
+		微软的操作系统研究项目
+		https://www.microsoft.com/en-us/research/group/operating-systems-technologies-os-tech
+
+		英特尔支持的研究项目
+		http://www.flingos.co.uk/
+
+		高价值wiki
+		https://wiki.osdev.org

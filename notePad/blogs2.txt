@@ -1,0 +1,94 @@
+﻿https://www.bilibili.com/bangumi/media/md
+https://www.bilibili.com/bangumi/play/ss
+https://api.bilibili.com/x/v2/reply?type=1&oid=103310&pn=1（av=oid）
+
+front-end gdb
+emulator hypervisor 
+full system emulation -> gem5 MARSSx86
+
+set PATH="E:\tools";%PATH%
+
+VBoxDbg开启 >  http://www.0eval.com/dds-stuff/86
+命令行临时开启 > D:\Program Files (x86)\vmbox\VirtualBox.exe --debug-command-line --start-running --startvm test
+
+t 单步/ g 继续/ ba设 bc取消 断点/da db dump内存/u 反汇编
+info vgatext
+ba x 1 0x7c00
+
+gdb用法
+target remote :1234
+set architecture i8086	进入保护模式后可以改回32位
+break *0x7c00
+x/8ui 0x7c00	x/512xb 0x7c00
+x/32ui $pc
+info registers
+x 是 examine 的缩写
+
+n表示要显示的内存单元的个数
+
+f表示显示方式, 可取如下值
+x 按十六进制格式显示变量。
+d 按十进制格式显示变量。
+u 按十进制格式显示无符号整型。
+o 按八进制格式显示变量。
+t 按二进制格式显示变量。
+a 按十六进制格式显示变量。
+i 指令地址格式
+c 按字符格式显示变量。
+f 按浮点数格式显示变量。
+
+u表示一个地址单元的长度
+b表示单字节，
+h表示双字节，
+w表示四字节，
+g表示八字节
+
+p/x $pc
+
+DB - Define Byte. 8 bits
+DW - Define Word. Generally 2 bytes on a typical x86 32-bit system
+DD - Define double word. Generally 4 bytes on a typical x86 32-bit system
+
+objdump -h/-j -d
+
+msys2 交叉环境构建
+pacman -Ss mingw64 binutils qemu 
+
+3种协议
+MIT Apache GPLv3
+无限制 在乎版权 需注明作者
+
+bootloader主要做四件事，
+1.开启A20地址线；
+2.探测内存，把内存相关信息告诉内核；
+3.初始化全局描述符表，开启分段机制，进入保护模式；
+4.把操作系统内核从磁盘加载到内存指定位置，跳转到内核，执行内核代码。
+https://blog.csdn.net/a7980718/article/details/71304718
+
+gcc:
+-o：指定生成的输出文件；
+-E：仅执行编译预处理；
+-S：将C代码转换为汇编代码；
+-wall：显示警告信息；
+-c：仅执行编译操作，不进行连接操作。
+
+切换tty：
+ctrl+alt+f1~f7
+chvt 1-7
+
+http://anonym.to
+
+http://www.deathwombat.com/registers.html x86寄存器发展
+
+
+bps,spc,hpc,cyl
+bps=bypes per sector (512 always)
+spc=sectors per cylinder (hm shouldn't this be sph?)
+hpc=heads per cylinder
+cyl=total cylinders
+
+H-Head（磁头/盘片）
+C-Cylinder（柱面数或者磁道数，即每个磁头的磁道数）
+S-Sector/Track（扇区，也就是每个磁道有多少扇区）
+
+强行搜索%E2%80%AE，字会反过来
